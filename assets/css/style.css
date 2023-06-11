@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
-
 *{
     padding: 0;
     margin: 0;
@@ -44,6 +43,7 @@ header .navegacao-primaria li a {
 }
 
 .section-div{
+    animation: inicializar .7s forwards;
     background-color: #000;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -82,4 +82,31 @@ header .navegacao-primaria li a {
 
 .section-div img {
     max-width: 100%;
+}
+
+.digitando::after{
+    content: '|';
+    margin-left: 5px;
+    opacity: 1;
+    animation: pisca .5s infinite;
+}
+
+@keyframes pisca {
+    from {
+        opacity: 1;
+       
+    }to {
+        opacity: 0;
+       
+    }
+}
+
+@keyframes inicializar {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }to {
+        opacity: 1;
+        transform: translate3d(0, 0 , 0);
+    }
 }
