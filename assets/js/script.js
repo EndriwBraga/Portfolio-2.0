@@ -78,51 +78,6 @@ function sobreMim(){
 
 sobreMim();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const listaAll = document.querySelectorAll('.projects_armazenamento ul li');
 const buttonGeral = document.querySelectorAll('.projects_models ul li');
 const buttonAll = document.querySelectorAll('.projects_models .all');
@@ -134,7 +89,6 @@ function removeClick(index){
 
     buttonGeral[index].classList.add('ativo');
 }
-
 
 buttonGeral.forEach((item,index)=>{
     item.addEventListener('click', ()=>{
@@ -172,8 +126,6 @@ function showLista(lista, buttom = "all"){
         lista[7].classList.add('ativo')
     }
 }
-
-
 
 buttonGeral.forEach((item)=>{
     item.addEventListener('click', (e)=>{
