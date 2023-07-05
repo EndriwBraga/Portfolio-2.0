@@ -79,7 +79,6 @@ function sobreMim(){
 sobreMim();
 
 const listaAll = document.querySelectorAll('.projects_armazenamento ul li');
-
 const buttonGeral = document.querySelectorAll('.projects_models ul li');
 const buttonAll = document.querySelectorAll('.projects_models .all');
 
@@ -91,6 +90,15 @@ function loadingPage() {
 
 loadingPage();
 
+/*
+buttonGeral.forEach((item,index)=>{
+    item.addEventListener('click', ()=>{
+        removeClick(index);
+    })
+})
+
+
+
 function removeClick(index){
     buttonGeral.forEach((item)=>{
         item.classList.remove('ativo');
@@ -98,50 +106,27 @@ function removeClick(index){
 
     buttonGeral[index].classList.add('ativo');
 }
+*/
 
-buttonGeral.forEach((item,index)=>{
-    item.addEventListener('click', ()=>{
-        removeClick(index);
-    })
-})
 
-function showLista(lista, button = "all"){
-    lista.forEach((item)=>{
-        item.classList.remove('ativo')
-    })
-
-    if(button === 'design'){
-        lista.forEach((item) => {
-            if (item.classList.contains('design')){
-                item.classList.add('ativo')
-            };
-          });
-    }
-
-    if(button === 'graphic'){
-        lista.forEach((item) => {
-            if (item.classList.contains('graphic')){
-                item.classList.add('ativo');
-            }
-        })
-    }
-
-    if(button === 'website'){
-        lista.forEach((item)=>{
-            if(item.classList.contains('website')){
-                item.classList.add('ativo')
-            }})}
-
-    if(button == 'all'){
-        lista.forEach((item)=>{
-            if(item.classList.contains('allProjects')){
-                item.classList.add('ativo')
-            }
-        })
-    }
-}
-
-buttonGeral.forEach((item)=>{
+function showLista(lista, button = "all") {
+    lista.forEach((item) => {
+      item.classList.remove('ativo');
+    });
+  
+    lista.forEach((item) => {
+      if (
+        (button === 'design' && item.classList.contains('design')) ||
+        (button === 'graphic' && item.classList.contains('graphic')) ||
+        (button === 'website' && item.classList.contains('website')) ||
+        (button === 'all' && item.classList.contains('allProjects'))
+      ) {
+        item.classList.add('ativo');
+      }
+    });
+  }
+  
+  buttonGeral.forEach((item)=>{
     item.addEventListener('click', (e)=>{
         let currentbutton = e.target;
         if(currentbutton.classList.contains('all')){
