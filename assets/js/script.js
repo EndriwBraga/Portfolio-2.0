@@ -82,6 +82,15 @@ const listaAll = document.querySelectorAll('.projects_armazenamento ul li');
 const buttonGeral = document.querySelectorAll('.projects_models ul li');
 const buttonAll = document.querySelectorAll('.projects_models .all');
 
+function loadingPage() {
+    document.addEventListener('DOMContentLoaded', function() {
+        showLista(listaAll, "all");
+    });
+}
+
+loadingPage();
+
+
 function removeClick(index){
     buttonGeral.forEach((item)=>{
         item.classList.remove('ativo');
@@ -142,9 +151,6 @@ buttonGeral.forEach((item)=>{
         if(currentbutton.classList.contains('website')){
             showLista(listaAll, "website")
         }
-        if(currentbutton.classList.contains('all')){
-            showLista(listaAll)
-        }
-
     })
 })
+

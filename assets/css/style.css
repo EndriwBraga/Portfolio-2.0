@@ -775,9 +775,6 @@ footer .footer_comercial{
     }
 }
 
-
-
-
 @media(max-width: 992px) {
     .section-div img {
         display: none;
@@ -804,5 +801,27 @@ footer .footer_comercial{
     }
     .sobre_conteudo {
         grid-column: 1/ -1;
+    }
+}
+
+
+@media(max-width: 550px) {
+
+    .funfacts ul{
+        grid-template-columns: 1fr;
+    }
+
+
+    .projects_armazenamento ul{
+    grid-template-columns: repeat(2, 1fr);
+}
+    .projects ul {
+        flex-wrap: wrap;
+    }
+}
+
+@media(max-width: 400px) {
+    .my_services ul li{
+        min-width: 200px;
     }
 }
