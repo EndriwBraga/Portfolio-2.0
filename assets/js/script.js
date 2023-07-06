@@ -90,39 +90,17 @@ function loadingPage() {
 
 loadingPage();
 
-/*
-buttonGeral.forEach((item,index)=>{
-    item.addEventListener('click', ()=>{
-        removeClick(index);
-    })
-})
-
-
-
-function removeClick(index){
-    buttonGeral.forEach((item)=>{
-        item.classList.remove('ativo');
-    })
-
-    buttonGeral[index].classList.add('ativo');
-}
-*/
-
-
 function showLista(lista, button = "all") {
     lista.forEach((item) => {
       item.classList.remove('ativo');
+      
     });
-  
+    
     lista.forEach((item) => {
-      if (
-        (button === 'design' && item.classList.contains('design')) ||
-        (button === 'graphic' && item.classList.contains('graphic')) ||
-        (button === 'website' && item.classList.contains('website')) ||
-        (button === 'all' && item.classList.contains('allProjects'))
-      ) {
+      if (button === 'all' || item.classList.contains(button)) {
         item.classList.add('ativo');
       }
+      
     });
   }
   
@@ -143,5 +121,3 @@ function showLista(lista, button = "all") {
         }
     })
 })
-
-
