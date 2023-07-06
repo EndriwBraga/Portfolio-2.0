@@ -92,15 +92,10 @@ loadingPage();
 
 function showLista(lista, button = "all") {
     lista.forEach((item) => {
-      item.classList.remove('ativo');
-      
-    });
-    
-    lista.forEach((item) => {
-      if (button === 'all' || item.classList.contains(button)) {
-        item.classList.add('ativo');
-      }
-      
+        item.classList.remove('ativo');
+        if (button === 'all' || item.classList.contains(button)) { 
+        item.classList.add('ativo');  
+      }    
     });
   }
   
